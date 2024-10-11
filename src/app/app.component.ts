@@ -11,4 +11,11 @@ import { SideBarComponent } from '@components/side-bar/side-bar.component';
 })
 export class AppComponent {
   title = 'CramEnglish';
+  x: number = 0;
+  y: number = 0;
+
+  onMouseMove(event: MouseEvent) {
+    this.x = event.clientX;
+    this.y = event.clientY;
+  }
 }

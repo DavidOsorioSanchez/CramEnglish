@@ -8,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
     outline: none;
     border: none;
@@ -17,25 +16,30 @@
         background-color: $Blue;
         text-decoration-line: line-through;
         transition: all 0.2s ease-in-out;
+        border-bottom: 0.1rem solid $Blue;
     }
 
-    &:hover ~ .text-button {
+    &:hover + .text-button {
         transform: skewX(100deg);
     }
+    
 
     @media screen and (prefers-color-scheme: dark) {
         background-color: fade($Black, 0.95);
         color: $White;
+        border-bottom: 0.1rem solid fade($White, 0.2);
     }
 
     @media screen and (prefers-color-scheme: light) {
         background-color: fade($Black, 0.10);
         color: $Black;
+        border-bottom: 0.1rem solid fade($Black, 0.2);
     }
 
     @media screen and (prefers-color-scheme: none) {
         background-color: fade($Black, 0.10);
         color: $Black;
+        border-bottom: 0.1rem solid fade($Black, 0.2);
     }
 }
 

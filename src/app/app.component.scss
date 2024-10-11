@@ -5,15 +5,18 @@
     width: 100vw;
 
     @media screen and (prefers-color-scheme: dark) {
-        background-color: fade($Black,0.8);
+        background-color: fade($Black, 0.8);
         color: $White;
     }
+
     @media screen and (prefers-color-scheme: light) {
         background-color: $White;
         color: $Black;
     }
+
     @media screen and (prefers-color-scheme: none) {
         background-color: $White;
         color: $Black;
     }
 }
+

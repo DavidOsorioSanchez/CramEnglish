@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SideButtonComponent } from '../side-button/side-button.component';
+import { SideButtonComponent } from '@components/side-button/side-button.component';
 
 @Component({
   selector: 'app-side-bar',

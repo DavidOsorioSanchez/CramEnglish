@@ -1,4 +1,5 @@
-<main class="main">
+<main class="main" (mousemove)="onMouseMove($event)">
+    <div class="float-mouse" [style]="{'top': y + 'px', 'left': x + 'px'}"></div>
     <app-side-bar/>
 </main>
 <router-outlet />

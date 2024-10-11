@@ -10,4 +10,6 @@ import { Input } from '@angular/core';
 })
 export class SideButtonComponent {
   @Input() public text : string = "Button";
+  
+  
 }

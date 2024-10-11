@@ -25,6 +25,7 @@ $DarkGreen: #629584;
     padding: 0px;
     box-sizing: border-box;
     overflow: hidden;
+    cursor: none !important;
 
     ::-webkit-scrollbar {
         width: 0px;
@@ -37,6 +38,28 @@ $DarkGreen: #629584;
 
 @mixin opacity($opacity) {
   opacity: $opacity;
+}
+
+
+.float-mouse {
+  position: absolute;
+  border-radius: 100%;
+  border-top-left-radius: 0px !important;
+  width: 1rem;
+  height: 1rem;
+  z-index: 10;
+  transform: brightness(5);
+  pointer-events: none !important;
+
+  @media screen and (prefers-color-scheme: dark) {
+      background-color: fade($White, 0.8);
+  }
+  @media screen and (prefers-color-scheme: light) {
+      background-color: fade($DarkBlue, 0.8);
+  }
+  @media screen and (prefers-color-scheme: none) {
+      background-color: fade($DarkBlue, 0.8);
+  }
 }
 
 // Define the theme object.
@@ -68,5 +91,3 @@ $CramEnglish-theme: mat.define-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-
