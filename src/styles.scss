@@ -13,6 +13,32 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+
+$Black: #141d24;
+$White: #f0f3f1;
+$DarkBlue: #243642;
+$Blue: #387478;
+$DarkGreen: #629584;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+@function fade($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+}
+
 // Define the theme object.
 $CramEnglish-theme: mat.define-theme((
   color: (
@@ -42,3 +68,5 @@ $CramEnglish-theme: mat.define-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

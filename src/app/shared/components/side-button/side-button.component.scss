@@ -1,0 +1,58 @@
+@import "../../../../styles.scss";
+
+.side-button {
+    width: 100%;
+    height: auto;
+    min-height: 5rem;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    border: none;
+
+    &:hover {
+        background-color: $Blue;
+        text-decoration-line: line-through;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover ~ .text-button {
+        transform: skewX(100deg);
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+        background-color: fade($Black, 0.95);
+        color: $White;
+    }
+
+    @media screen and (prefers-color-scheme: light) {
+        background-color: fade($Black, 0.10);
+        color: $Black;
+    }
+
+    @media screen and (prefers-color-scheme: none) {
+        background-color: fade($Black, 0.10);
+        color: $Black;
+    }
+}
+
+.text-button {
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (prefers-color-scheme: dark) {
+        color: $White
+    }
+
+    @media screen and (prefers-color-scheme: light) {
+        color: $Black;
+    }
+
+    @media screen and (prefers-color-scheme: none) {
+        color: $Black;
+    }
+}

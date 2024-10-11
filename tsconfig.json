@@ -3,6 +3,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+        "@components/*": ["src/app/shared/components/*"],
+        "@directive/*": ["src/app/shared/directive/*"],
+        "@pipe/*": ["src/app/shared/pipe/*"],
+        "@service/*": ["src/app/core/service/*"],
+        "@guard/*": ["src/app/core/guard/*"],
+        "@interceptors/*": ["src/app/core/interceptors/*"],
+        "@models/*": ["src/app/core/models/*"],
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
