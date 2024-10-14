@@ -20,16 +20,16 @@ $DarkBlue: #243642;
 $Blue: #387478;
 $DarkGreen: #629584;
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    overflow: hidden;
-    cursor: none !important;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: url(../public/icons/cursor.svg), auto;
 
-    ::-webkit-scrollbar {
-        width: 0px;
-    }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 
 @function fade($color, $opacity) {
@@ -40,39 +40,13 @@ $DarkGreen: #629584;
   opacity: $opacity;
 }
 
-
-.float-mouse {
-  position: absolute;
-  border-radius: 100%;
-  border-top-left-radius: 0px !important;
-  width: 1rem;
-  height: 1rem;
-  z-index: 10;
-  transform: brightness(5);
-  pointer-events: none !important;
-
-  @media screen and (prefers-color-scheme: dark) {
-      background-color: fade($White, 0.8);
-  }
-  @media screen and (prefers-color-scheme: light) {
-      background-color: fade($DarkBlue, 0.8);
-  }
-  @media screen and (prefers-color-scheme: none) {
-      background-color: fade($DarkBlue, 0.8);
-  }
-}
-
 // Define the theme object.
-$CramEnglish-theme: mat.define-theme((
-  color: (
-    theme-type: light,
-    primary: mat.$azure-palette,
-    tertiary: mat.$blue-palette,
-  ),
-  density: (
-    scale: 0,
-  )
-));
+$CramEnglish-theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      density: (scale: 0,
+      )));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -89,5 +63,12 @@ $CramEnglish-theme: mat.define-theme((
 // @include mat.color-variants-backwards-compatibility($CramEnglish-theme);
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
