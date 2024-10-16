@@ -10,6 +10,5 @@ import { Input } from '@angular/core';
 })
 export class SideButtonComponent {
   @Input() public text : string = "Button";
-  
-  
+  @Input() public icon : string = "/icons/calendar.svg";
 }

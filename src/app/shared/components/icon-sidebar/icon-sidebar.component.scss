@@ -1,16 +1,8 @@
 @import "../../../../styles.scss";
 
 .icon-sidebar {
-    size: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     padding: 0.5rem;
-
-    @media screen and (prefers-color-scheme: dark) {
-        fill: $White;
-    }
-    @media screen and (prefers-color-scheme: light) {
-        fill: $Black;
-    }
-    @media screen and (prefers-color-scheme: none) {
-        fill: $Black;
-    }
+    fill: $White;
 }

@@ -5,7 +5,7 @@
     top: 0;
     left: 0;
     z-index: 5;
-    width: 5rem;
+    width: 4rem;
     grid-template-rows: repeat(2, 1fr);
     height: 100vh;
     padding-right: 0.1px;
@@ -16,36 +16,22 @@
         width: 15rem;
         transition: width 150ms ease-in-out;
 
-        .side-button-container{
+        .side-button-container {
             display: flex;
         }
 
-        .side-icons-container{
+        .side-icons-container {
             display: none;
         }
     }
 
-    @media screen and (prefers-color-scheme: dark) {        
-        -webkit-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.5);
-        -moz-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.5);
-        box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.5);
-        border-right: 1px solid fade($White,0.2);        
-    }
-    @media screen and (prefers-color-scheme: light) {        
-        -webkit-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        -moz-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        border-right: 1px solid fade($Black,0.3);        
-    }
-    @media screen and (prefers-color-scheme: none) {        
-        -webkit-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        -moz-box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        box-shadow: 2px 0px 20px 10px rgba(20,29,36,0.1);
-        border-right: 1px solid fade($Black,0.3);        
-    }
+    -webkit-box-shadow: 2px 0px 20px 10px rgba(20, 29, 36, 0.5);
+    -moz-box-shadow: 2px 0px 20px 10px rgba(20, 29, 36, 0.5);
+    box-shadow: 2px 0px 20px 10px rgba(20, 29, 36, 0.5);
+    border-right: 1px solid fade($White, 0.2);
 }
 
-.under-side-bar {    
+.under-side-bar {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,32 +39,21 @@
     height: 100vh;
     grid-row: 1;
 
-    @media screen and (prefers-color-scheme: dark) {
-        background-color: fade($Black,0.85);
+        background-color: fade($Black, 0.85);
         color: $White;
-    }
-    @media screen and (prefers-color-scheme: light) {
-        background-color: fade($Black,0.2);
-        color: $Black;
-    }
-    @media screen and (prefers-color-scheme: none) {
-        background-color: fade($Black,0.2);
-        color: $Black;
-    }
 }
 
-.side-button-container{
+.side-button-container {
     width: 100%;
     display: none;
     flex-direction: column;
 }
 
-.side-icons-container{
+.side-icons-container {
     width: 100%;
-    gap: 0.5rem;
+    gap: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0.2rem;
+    padding-top: 1.6rem;
 }
-

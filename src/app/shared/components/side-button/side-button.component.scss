@@ -2,12 +2,8 @@
 
 .side-button {
     width: 15rem;
-    height: auto;
-    min-height: 5rem;
-    padding: 0.5rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 5rem;
+    position: relative;
     transition: all 0.2s ease-in-out;
     outline: none;
     border: none;
@@ -17,46 +13,41 @@
         text-decoration-line: line-through;
         transition: all 0.2s ease-in-out;
         border-bottom: 0.1rem solid $Blue;
+        
+        .text-button {
+            transform: translate(0rem, -1.9rem);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .icon-button {
+            transform: translate(-2.5rem, -0.3rem);
+            transition: all 0.2s ease-in-out;
+        }
     }
 
-    &:hover + .text-button {
-        transform: skewX(100deg);
-    }
-    
 
-    @media screen and (prefers-color-scheme: dark) {
-        background-color: fade($Black, 0.95);
-        color: $White;
-        border-bottom: 0.1rem solid fade($White, 0.2);
-    }
-
-    @media screen and (prefers-color-scheme: light) {
-        background-color: fade($Black, 0.10);
-        color: $Black;
-        border-bottom: 0.1rem solid fade($Black, 0.2);
-    }
-
-    @media screen and (prefers-color-scheme: none) {
-        background-color: fade($Black, 0.10);
-        color: $Black;
-        border-bottom: 0.1rem solid fade($Black, 0.2);
-    }
+    background-color: fade($Black, 0.95);
+    color: $White;
+    border-bottom: 0.1rem solid fade($White, 0.2);
 }
 
 .text-button {
     font-size: 1.6rem;
     font-weight: 500;
     transition: all 0.2s ease-in-out;
+    color: $White;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+}
 
-    @media screen and (prefers-color-scheme: dark) {
-        color: $White
-    }
-
-    @media screen and (prefers-color-scheme: light) {
-        color: $Black;
-    }
-
-    @media screen and (prefers-color-scheme: none) {
-        color: $Black;
-    }
+.icon-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-14%, -52%);
 }
